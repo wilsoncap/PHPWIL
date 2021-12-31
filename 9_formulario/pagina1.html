@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Entrada de datos</title>
+  </head>
+  <body>
+    <form method="post" action="pagina2.php">
+      Ingrese su nombre:
+      <input type="text" name="nombre" />
+      <br />
+      Ingrese primer valor:
+      <input type="text" name="valor1" />
+      <br />
+      Ingrese segundo valor:
+      <input type="text" name="valor2" />
+      <br />
+      <input type="radio" name="radio1" value="suma" />sumar
+      <br />
+      <input type="radio" name="radio1" value="resta" />restar
+      <br />
+      <input type="submit" value="confirmar" />
+      <!--También utilizamos el elemento input pero en la propiedad type indicamos que se trata de un botón de envío de datos-->
+    </form>
+
+    <!-- La propiedad action indica el nombre del archivo que recibirá los datos ingresados por el operador 
+      en el formulario y que serán enviados al servidor cuando se presione el botón (submit).
+       La propiedad method indica como se organizan esos datos para enviarlos al servidor, pudiendo ser 
+       mediante los métodos post o get (normalmente los datos de un formulario se envían mediante el método post). -->
+
+    <br />
+    <br />
+    <br />
+
+    <!-- Ahora vemos que los dos controles de tipo radio tienen el MISMO nombre. Esto es 
+      necesario para que el navegador sepa que los dos controles están relacionados 
+      (recordar que cuando uno selecciona un radio se debe deseleccionar el otro) -->
+  </body>
+</html>
