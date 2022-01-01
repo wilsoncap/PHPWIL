@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="e_select.php" method="post">
+      Ingrese primer valor:
+      <input type="text" name="nombre" />
+      <br />
+      <select name="impuestos">
+        <!--nombre del select, Cada opción tiene un valor (value). El seleccionado es el que se enviará a la página que procesa el formulario-->
+        <option value="1">1-1.000</option>
+        <!--valores que envia segun item seleccionado-->
+        <option value="2">1.001-3.000</option>
+        <option value="3">>3.000</option>
+      </select>
+      <br />
+      <input type="submit" name="operar" />
+    </form>
+  </body>
+</html>

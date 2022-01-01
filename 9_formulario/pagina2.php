@@ -36,8 +36,8 @@
         echo "La resta es:" . $resta;
     }
   
+?>
 
-
-  ?>
+<h2></h2>
   </body>
 </html>
