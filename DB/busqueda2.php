@@ -15,9 +15,7 @@
                             where nombre='$_REQUEST[nombre]'") or
     die("Problemas en el select:" . mysqli_error($conexion));
 
-  if ($reg = mysqli_fetch_array($registros)) {
-    // aunque sea un solo registro. En caso de retornar un vector asociativo la condición del if se verifica como 
-    // verdadera y pasa a mostrar los datos, en caso de retornar false se ejecuta el else.
+    if ($reg = mysqli_fetch_array($registros)) {
     echo "Nombre:" . $reg['nombre'] . "<br>";
     echo "Curso:";
     switch ($reg['codigocurso']) {
@@ -32,8 +30,9 @@
         break;
     }
   } else {
-    echo "No existe un alumno con ese nombre.";
+    echo "No existe un alumno con ese mail.";
   }
+
   mysqli_close($conexion);
   ?>
 </body>

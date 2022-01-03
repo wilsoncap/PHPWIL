@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subir archivos al servidor</title>
+  </head>
+  <body>
+    <form action="33_upload.php" method="post" enctype="multipart/form-data">
+      <!--Se define una nueva propiedad para la etiqueta form, con esta indicamos que dentro del formulario de carga se envían archivos-->
+      Seleccione el archivo:
+      <input
+        type="file"
+        name="foto"
+      /><br /><!--El control HTML para la selección del archivo se llama "file":-->
+      <input type="submit" value="Enviar" />
+    </form>
+    <!-- Ejercicio peridnete del tema 33 -->
+  </body>
+</html>
