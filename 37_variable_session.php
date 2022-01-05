@@ -16,7 +16,6 @@ $_SESSION['clave'] = $_REQUEST['campoclave'];
 </head>
 <body>
     Se almacenaron dos variables de sesión.<br><br>
-  <a href="37_variable_session2.php">Ir a la tercer página donde se recuperarán
-    las variables de sesión</a>
+  
 </body>
 </html>
