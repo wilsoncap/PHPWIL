@@ -20,7 +20,7 @@ session_start();
   <?php
   // Tengamos en cuenta que en cualquier otra página del sitio tenemos acceso a las variables de sesión sólo con llamar 
   // inicialmente a la función session_start().
-    echo "<h2> $_SESSION[usuario] </h2>";
+    echo "<h2> Bienvenido señor $_SESSION[usuario] </h2>";
     echo "<br><br>";
     echo "<h2> $_SESSION[clave] </h2>";
     ?>
