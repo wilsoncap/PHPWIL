@@ -11,18 +11,18 @@ $s_cursos = mysqli_query($conexion, "select codigo, nombrecurso from cursos") or
 
 
 
-// class rubros{
+class rubros{
 
-//     private $descripcion;
+    private $descripcion;
 
-//     public function __construct($descrip){
-//         $this->descripcion=$descrip;
-//     }
+    public function __construct($descrip){
+        $this->descripcion=$descrip;
+    }
 
-//     public function insertarRubros(){
-//         $result = $mysql->query("insert into rubros(descripcion) values ('.$this->descripcion.')") or
-//         die($mysql->error);
-//         return $result;
-//     }
-// }
+    public function insertarRubros(){
+        $conexion->query("insert into rubros(descripcion) values ('.$this->descripcion.')") or
+        die($mysql->error);
+        return $result;
+    }
+}
 ?>
