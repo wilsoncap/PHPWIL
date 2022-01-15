@@ -7,18 +7,21 @@
   <title>Document</title>
 </head>
 <body>
-   <?php
+  <?php
   // archivo conexion base de datos
       require_once("conexion.php");
   //-------------------------------
+
+  echo "$_REQUEST[nombre] . <br>";
+  echo "$_REQUEST[email] <br>";
+  echo "$_REQUEST[codigocurso] <br>";
   $fechanacimiento = $_REQUEST['anio'] . "-" . $_REQUEST['mes'] . "-" . $_REQUEST['dia'];
-  mysqli_query($conexion, "insert into alumnos(nombre, email, fechanac, codigocurso) values 
-           ('$_REQUEST[nombre]',
-           '$_REQUEST[email]',
-           '$fechanacimiento',
+  echo "$fechanacimiento";
+  mysqli_query($conexion, "insert into alumnos(nombre,email, fechanac, codigocurso) values 
+           ('$_REQUEST[nombre]','$_REQUEST[email]', '$fechanacimiento', 
             $_REQUEST[codigocurso])") or
-            die("Problemas en el insert alumnos" . mysqli_error($conexion));
-  
+    die("Problemas en el insert alumnos" . mysqli_error($conexion));
+  mysqli_close($conexion);
   echo "El alumno fue dado de alta.";
   ?>
   <br>
