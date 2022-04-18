@@ -33,13 +33,13 @@
   if ($conexion->connect_error)
     die('Problemas con la conexion a la base de datos');
 
-  $registros = $conexion->query("select codigo,descripcion from rubros") or
+  $registros = $conexion->query("call pa_mostrar_articulos()") or
     die($conexion->error);
   // Ahora llamamos al método query pasando un string con el comando SQL select. El método query retorna un objeto
   // de la clase mysqli_result:
 
   echo '<table class="tablalistado">';
-  echo '<tr><th>Código</th><th>Descripción</th></tr>';
+  echo '<tr><th>Código</th><th>Descripción</th><th>precio</th><th>categoria</th></tr>';
   while ($reg = $registros->fetch_array()) {
     // El objeto de la clase mysqli_result tiene un método llamado fetch_array que retorna de a uno cada una de 
     // los registros recuperados con el comando SQL select:
@@ -50,11 +50,23 @@
     echo '<td>';
     echo $reg['descripcion'];
     echo '</td>';
+    echo '<td>';
+    echo $reg['precio'];
+    echo '</td>';
+    echo '<td>';
+    echo $reg['codigorubro'];
+    echo '</td>';
     echo '</tr>';
   }
-  echo '<table>';
+  echo '<table> ';
+
+  echo "<br>";
+
+
 
   $conexion->close();
+
+  echo "<a href='48_alta_rubros.html' >Ingresar otro producto</a>"
 
   ?>
 </body>
